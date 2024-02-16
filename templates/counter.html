@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>Creativo</title>
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="{% static 'css/counter.css' %}">
+
+	</head>
+
+
+	<body>
+		
+		<div class="site-content">
+			
+			<main class="main-content">
+				<div class="container shrinked">
+					<h1 class="section-title center-aligned">We are preparing something new. <br> <span>Stay tuned!</span></h1>
+
+					<div class="counter-wrap" data-date-target="Feb 29, 2024 10:00:00">
+						<div class="counter days">
+							<div class="number">78</div>
+							<div class="caption">Days</div>
+						</div> <!-- .counter -->
+						<div class="counter hours">
+							<div class="number">24</div>
+							<div class="caption">Hours</div>
+						</div> <!-- .counter -->
+						<div class="counter minutes">
+							<div class="number">43</div>
+							<div class="caption">Minutes</div>
+						</div> <!-- .counter -->
+						<div class="counter seconds">
+							<div class="number">38</div>
+							<div class="caption">Seconds</div>
+						</div> <!-- .counter -->
+					</div> <!-- .counter-wrap -->
+
+				</div>	<!-- .container -->
+			</main> <!-- .main-content -->
+		</div>
+
+		<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+		<script src="{% static 'js/plugins.js' %}"></script>
+		<script src="{% static 'js/app.js' %}"></script>
+		
+	</body>
+
+</html>
