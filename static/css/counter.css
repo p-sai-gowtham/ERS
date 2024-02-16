@@ -219,7 +219,15 @@ body {
   background-image: -webkit-radial-gradient(circle, #39323e, #262029);
   background-image: radial-gradient(circle, #39323e, #262029);
   background-size: cover;
-  background-atachment: fixed; }
+}
+
+.site-content{
+  height: 735px;
+}
+
+.container .shrinked{
+  padding-top: 100px !important;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
@@ -263,7 +271,7 @@ form textarea {
   text-align: right; }
 
 .container.shrinked {
-  padding: 0 200px; }
+  padding: 150px 200px; }
   @media screen and (min-width: 991px) and (max-width: 1200px) {
     .container.shrinked {
       padding: 0 100px; } }
