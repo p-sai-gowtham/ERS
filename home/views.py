@@ -7,5 +7,5 @@ def home(request):
 def elective(request):
     return render(request, 'student/electives.html')
 
-def admin(request):
-    return render(request, 'admin/index.html')
+def ad(request):
+    return render(request, 'ad/index.html')
