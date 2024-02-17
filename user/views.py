@@ -3,7 +3,39 @@ from django.contrib.auth import authenticate, login, logout
 from .models import User
 from django.contrib import messages
 from django.contrib.auth.hashers import make_password, check_password
+from django.shortcuts import render
+from django.shortcuts import render
+from datetime import datetime, timedelta
 
+from .models import Counter
+
+def days_counter(request):
+    # Retrieve the Counter object
+    counter = Counter.objects.first()
+    
+    # Calculate the time difference since the start date
+    if counter:
+        start_datetime = counter.start_datetime
+        now = datetime.now()
+        time_passed = now - start_datetime
+        days_passed = time_passed.days
+        hours_passed, remainder = divmod(time_passed.seconds, 3600)
+        minutes_passed, seconds_passed = divmod(remainder, 60)
+    else:
+        days_passed = None
+        hours_passed = None
+        minutes_passed = None
+        seconds_passed = None
+
+    return render(request, 'counter/days_counter.html', {
+        'days_passed': days_passed,
+        'hours_passed': hours_passed,
+        'minutes_passed': minutes_passed,
+        'seconds_passed': seconds_passed
+    })
+
+
+    
 
 def signin(request):
     if request.method == "POST":

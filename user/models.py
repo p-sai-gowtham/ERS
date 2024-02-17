@@ -49,3 +49,7 @@ class User(AbstractUser):
 
 
     objects = UserManager()
+
+class Counter(models.Model):
+    start_date = models.DateTimeField()
+    end_date = models.DateTimeField()
