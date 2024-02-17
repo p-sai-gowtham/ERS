@@ -33,9 +33,6 @@ class UserManager(BaseUserManager):
         return user
 
 
-
-
-
 class User(AbstractUser):
     username = None
     username = models.CharField(max_length=100, unique=True)
